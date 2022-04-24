@@ -1,0 +1,21 @@
+.title{
+    color: red;
+}
+#title{
+    color: skyblue;
+}
+h3{
+    color: orange;
+}
+*{
+    background: pink;
+}
+.list li{
+    color: rebeccapurple;
+} 
+.list .second{
+    color: red;
+}
+#third{
+    color: grey;
+}

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lesson8-重置样式，基础布局</title>
+    <style>
+        /* 重置样式，保证在每一个浏览器上都可以正常显示 */
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        .wrap{
+            height: 866px;
+        }
+        .header{
+            height: 90px;
+            background-color: black;
+            padding: 16px 24px;
+        }
+        .Header-item{
+            width: 1720px;
+            margin: 13px auto;
+        }
+        .Header-item img{
+            vertical-align: middle;
+        }
+        .main{
+            background-color: rgb(240, 240, 240,0.5);
+            overflow: hidden;
+        }
+        .main .left{
+            height: 789px;
+            width: 474px;
+            border: white solid 1px;
+            float: left;
+        }
+        .main .middle{
+            float: left;
+            padding: 24px;
+            width: 576px;
+            height: 789px;
+        }
+        .main_introduce{
+            height: 500px;
+            background-color: white;
+            border-radius: 1.8%;
+            margin: 30px 10px 10px 32px;
+            border: lightgray solid 1px;
+            padding: 30px;
+        }
+    </style>
+</head>
+<body>
+    <div class="wrap">
+        <header class="header">
+            <div class="Header-item">
+                <img src="github-fill.png" alt="">
+            </div>
+        </header>
+        <div class="main">
+            <div class="left"></div>
+            <div class="middle">
+                All activity
+                <div class="main_introduce">
+                    <b>Introduce yourself</b>
+                    <p style="font-size: 14px;">The easiest way to introduce yourself on GitHub is by creating a README in a repository about you! You can start here:</p>
+                </div>
+            </div>
+        </div>
+        <div class="footer"></div>
+    </div>
+</body>
+</html>

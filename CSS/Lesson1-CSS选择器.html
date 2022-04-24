@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lesson1-CSS选择器</title>
+    <style>
+
+        /*
+        .title{
+            color: red;
+        }
+        #title{
+            color: skyblue;
+        }
+        h3{
+            color: orange;
+        }
+        *{
+            background: pink;
+        }
+        .list li{
+            color: rebeccapurple;
+        } /*子代选择器/后台选择器/延伸选择器
+        <父元素>空格<子元素>
+        .list .second{
+            color: red;
+        }
+        #third{
+            color: grey;
+        }
+        */
+    </style>
+    <!-- 引用CSS样式文件 -->
+    <link rel="stylesheet" href="lesson1.css">
+</head>
+<body>
+    <!--
+        CSS的声明：CSS属性和值使用冒号进行分隔，每条样式结束之后加分号
+        选择器：
+            class选择器，用来将多个元素归成为一类，并且可以对这一类的元素使用样式。通过小数点来进行选择;
+            id选择器，相同页面不允许重复，唯一性。通过#<id-value>来进行选择
+            元素选择器，即为标签名选择器。直接通过标签名来进行选择
+            通配符*选择所有元素
+            优先级: !important元素 > 行内样式 > id > class > 元素选择器；若优先级相同则从上到下进行覆盖
+            出现子代选择器的时候，逐级比较优先级，最后选择优先级最高的
+            若有元素使用！important,则该css的优先级最高
+            花括号外不可以使用分号，否则之后的样式无法生效
+    -->
+    <h2 class="title">
+        标题党
+    </h2>
+    <h2 id="title">
+        标题党
+    </h2>
+    <h3>
+        小标题党
+    </h3>
+    <ul class="list">
+        <li>111</li>
+        <li class="second" style="color: hotpink;">222</li>
+        <li id="third">333</li>
+    </ul>
+</body>
+</html>

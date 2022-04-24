@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lesson5-DIV</title>
+    <style>
+        .test{
+            background-color: skyblue;
+            height: 28px;
+        }
+    </style>
+</head>
+<body>
+    <!-- 
+        默认宽度：自动将盒子宽度拉伸到最大
+        默认高度为0，可以由子元素将盒子高度撑起来；若div高度设置过小，则div之后元素的信息可能会与div中元素信息重合
+        div的前后元素会被自动换行
+        p元素中不可以包含块级元素，可以通过F12查看元素的display:block来确定是否为块级元素，块级元素的特点是前后都会被换行
+        内联元素，从左向右排列，不会被换行 a 标签，b标签，input标签，u,i,strong
+    -->
+    <div class="test">
+        <b>alex</b><br>
+        <p>this is test</p>
+    </div>
+    <p>maybe overlap</p>
+    <p><a href="http://www.baidu.com">百度</a></p>
+</body>
+</html>

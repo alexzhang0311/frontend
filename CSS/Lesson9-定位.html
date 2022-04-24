@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lesson9-定位</title>
+    <style>
+        .box{
+            width: 150px;
+            height: 150px;
+            background: orange;
+            position: relative;
+        }
+        .box1{
+            width: 50px;
+            height: 50px;
+            background-color: skyblue;
+        }
+        .box-ab{
+            width: 150px;
+            height: 150px;
+            background: red;
+            position: absolute;
+        }
+        .box-wrap{
+            width: 300px;
+            height: 300px;
+            background: lightpink;
+            position: relative;
+            margin: 0 auto;
+        }
+        .pointer{
+            background-color: limegreen;
+            height: 70px;
+            width: 80px;
+            position: fixed;
+            bottom: 30%;
+            left: 50%;
+            margin-left: 200px;
+        }
+        .pointer p{
+            color: linen;
+            font-size: 25px;
+            text-align: center;
+            line-height: 35px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <!-- 
+        定位：可以将元素摆放至任意位置，并且可以不影响别的元素位置; position默认为static
+        除了static定位，其它的定位都有四个样式：top right bottom left
+        相对定位：
+            1. 占据原来的位置
+            2. 相对于原来的位置来进行移动
+        绝对定位：
+            1. 不占据任何空间，在浮动空间上层
+            2. 相对于父元素空间(position:static除外)进行移动，就近原则
+        固定定位：
+            1. 不占据任何空间，在浮动空间上层
+            2. 相对于浏览器进行移动
+     -->
+     <div class="box1"></div>
+     <div class="box"></div>
+     <div class="box1"></div>
+     <br>
+     <div class="box1"></div>
+     <div class="box-wrap">
+         <div class="box-ab"></div>
+     </div>
+     <div class="box1"></div>
+     <div class="pointer">
+        <p>⬆</p>
+     </div>
+
+    </body>
+</html>

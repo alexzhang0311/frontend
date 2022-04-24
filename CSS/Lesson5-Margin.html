@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lesson5-Margin外边距,padding外边距</title>
+    <style>
+        .box1{
+            width: 150px;
+            height: 150px;
+            background-color: skyblue;
+            margin-top: 10px; /*距离上面元素的边距，不计算外边距*/
+            margin-left: 10px;
+            margin-bottom: 10px; 
+            /*块级元素默认占据一行，如果元素不设置宽度，则会自动占满整行，所以会有右外边距，但是如果设置了宽度，就没有右外边距*/
+            margin: 0 0 0 0; /*上，右，下，左 
+            margin 0 0 垂直方向：上+下 水平方向：左+右
+            margin 0 0 0 上 水平方向 下*/
+        }
+        .box2{
+            width: 150px;
+            height: 150px;
+            background-color: purple;
+            margin-top: 10px; /*距离上面元素内容的边距，若上面内容不存在下边距*/
+            margin: 0 auto; /*自适应居中 只有外边距才有auto, 内边距没有*/
+        }
+        /* 
+            HTML排列方向：从左至右，从上至下 
+            内联元素：没有垂直方向的外边距，但是可以有左右方向的外边距
+        */
+
+        /* 
+            内边距：设置文本的安全区域，使得文字不靠边
+            没有负值，也没有Auto
+            会撑大盒子的体积，内部白。但是外边距不会
+            不会改变区域的主要内容
+        */
+        .box3{
+            width: 150px;
+            height: 150px;
+            background-color: khaki;
+            padding-top: 10px;
+            margin-top: 10px;
+            padding: 0 0 0 0; /*上右下左*/
+            /* box-sizing: border-box; 设置区域+内边距固定体积，此时设置内边距会改变区域的大小与内容；默认是content-box */
+        }
+        /* 
+            边框 
+            会增大区域面积
+            边框样式：
+            solid 加粗实线
+            dotted 点状
+            dashed 虚线
+            double 双线
+        */
+        .box4{
+            width: 150px;
+            height: 150px;
+            background-color: lightgreen;
+            /* border-width: 5px; */
+            /* border-color: black; */
+            /* border-style:double; */
+            border: gray 5px dashed;
+            /* border-top: purple 10px solid; */
+        }
+        /* 利用border做三角形 */
+        .triangle{
+            width: 0px;
+            height: 0px;
+            margin: 10px auto;
+            border-bottom: slateblue 50px solid;
+            border-left: 50px solid transparent;
+            border-right: 50px solid transparent;
+            transform: rotate(45deg);
+        }
+    </style>
+</head>
+<body>
+    <div class="box1"></div>
+    <div class="box2"></div>
+    <div class="box3"></div>
+    <div class="box4"></div>
+    <div class="triangle"></div>
+</body>
+</html>

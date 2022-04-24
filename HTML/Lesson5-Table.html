@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Table</title>
+</head>
+<body>
+    <table border="1">
+        <caption>九宫格</caption> <!--添加表格标签，也可用h标签-->
+        <thead> <!--表格头-->
+            <tr>
+                <th>姓名</th>
+                <th>年龄</th>
+                <th>性别</th>
+            </tr>
+        </thead>
+        <tbody> <!--表格体-->
+            <tr> <!--一行-->
+                <td>11</td> <!--一列-->
+                <td colspan="2">22</td> <!--合并单元格，按列合并,合并2格-->
+            </tr>
+            <tr> <!--一行-->
+                <td>桌面</td> <!--一列-->
+                <td>
+                    <a href="http://baidu.com">
+                        <img src="static\Desktop.jpg" alt="" width="200" title="桌面">
+                    </a>
+                </td>
+                <td rowspan="2">33</td> <!--合并单元格，按行合并,合并2格-->
+            </tr>
+            <tr> <!--一行-->
+                <td>11</td> <!--一列-->
+                <td>22</td>
+            </tr>
+        </tbody>
+    </table>
+</body>
+</html>

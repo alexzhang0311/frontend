@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lesson2-段落文本样式</title>
+</head>
+<style>
+    /* 整个页面的字体大小 */
+    body{
+        font-size: 16px;
+    }
+    .wenlai{
+        font-size: 12px;
+        /*字符间距*/
+        letter-spacing: 2px;
+        /* 行间距 下面一行底部距离上面一行底部间距*/
+        line-height: 20px;
+        background: hotpink;
+        /* 文本对齐方式，不仅仅可以对齐文本，left,center,right */
+        text-align: left;
+        /* 缩进一格,文字16像素*/
+        text-indent: 2em;
+        /* 单位 
+            px 像素
+            % 百分比 相对于body根的文字大小
+            em 相对单位 1em 当前文字大小,如果有字符间距,则文字对齐会受影响.
+            rem = rootem,相对于body根的相对单位 
+        */
+    }
+    .spacing{
+        /* 空格间距 */
+        word-spacing: 10px;
+    }
+    .underline{
+        /* 下划线 */
+        text-decoration: underline;
+        /* 上划线 */
+        text-decoration: overline;
+        /* 删除线 与s,del标签效果相同*/
+        text-decoration: line-through;
+    }
+    a{
+        text-decoration: none;
+    }
+    .list li{
+        list-style-type: none;
+    }
+    .list{
+        padding: 0%;
+    }
+</style>
+<body>
+    <p class="wenlai">
+        文莱达鲁萨兰国（马来语：Negara Brunei Darussalam），简称文莱（Brunei），位于东南亚的婆罗洲北岸。 [1]  和马来西亚的砂拉越、沙巴合称北婆三邦，是一个君主专制国家。人口45.95万（2019年），其中马来人占65.8%，华人占10.2%。国教为伊斯兰教。 [1]  首都斯里巴加湾市。
+    </p>
+    <p class="spacing">
+        hello alex, i love you
+    </p>
+    <div style="font-size: 50%;">
+        <p style="font-size: 0.5em; text-indent: 50%;">
+            中华人民共和国（the People's Republic of China），简称“中国”，成立于1949年10月1日 [1]  ，位于亚洲东部，太平洋西岸 [2]  ，是工人阶级领导的、以工农联盟为基础的人民民主专政的社会主义国家 [3]  ，以五星红旗为国旗 [4]  、《义勇军进行曲》为国歌 [5]  ，国徽内容为国旗、天安门、齿轮和麦稻穗 [6]  ，通用语言文字是普通话和规范汉字 [7]  ，首都北京 [8]  ，是一个以汉族为主体、56个民族共同组成的统一的多民族国家。
+        </p>
+    </div>
+    <p class="underline">
+        我們在 vim 程式編輯器當中，提到過 DOS 斷行字元與 Unix 斷行字元的不同，並且可以使用 dos2unix 與 unix2dos 來完成轉換。好了，那麼思考一下，是否還有其他常用的字元替代？ 舉例來說，要將大寫改成小寫，或者是將資料中的 [tab] 按鍵轉成空白鍵？還有，如何將兩篇訊息整合成一篇？ 底下我們就來介紹一下這些字元轉換命令在管線當中的使用方法
+    </p>
+    <a href="javascript: void(0);">a标签无下划线</a>
+    <ul class="list">
+        <li>没有小黑圆点的无序列表</li>
+        <li>111</li>
+        <li>222</li>
+        <li>333</li>
+    </ul>
+</body>
+</html>

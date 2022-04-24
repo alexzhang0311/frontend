@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lesson10-层级关系</title>
+    <style>
+        .box1{
+            height: 100px;
+            width: 100px;
+            background-color: orange;
+            position: absolute;
+            z-index: 2;
+        }
+        .box2{
+            height: 130px;
+            width: 130px;
+            background-color: red;
+            position: absolute;
+            z-index: 1;
+        }
+        .box3{
+            height: 160px;
+            width: 160px;
+            background-color: skyblue;
+            position: absolute;
+        }
+    </style>
+</head>
+<body>
+    <!-- 
+        z-index调整层级关系：
+         1. 只有定位元素才会有z-index
+         2. 针对position:static之外的情况
+         3. 值越高，显示越靠前；值相同的情况，按顺序来进行重叠覆盖
+     -->
+    <div class="box1"></div>
+    <div class="box2"></div>
+    <div class="box3"></div>
+</body>
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lesson3-字体样式</title>
+    <style>
+        .zero{
+            /* 
+                字体大小
+                一般为偶数像素，不会出现13
+                Chrome浏览器最小的字体大小为12像素 
+            */
+            font-size: 16px;
+            font-family: "microsoft yahei"; /*字体样式chrome浏览器的默认字体*/
+            /* 字体风格 主要用于倾斜还是不倾斜*/
+            font-style: italic;
+            /* 文字加粗 100-900 正常默认取值为400 b标签为700*/
+            font-weight: 900;
+            /* 用一条语句表达上述所有风格 12px/20px(字符大小/行间距)*/
+            font: italic bold 12px/20px arial;
+            /*
+                font-style
+                font-weight
+                font-size/line-height
+                font-family
+            */
+        }
+    </style>
+</head>
+<body>
+    <p class="zero">
+        我們在 vim 程式編輯器當中，提到過 DOS 斷行字元與 Unix 斷行字元的不同，並且可以使用 dos2unix 與 unix2dos 來完成轉換。好了，那麼思考一下，是否還有其他常用的字元替代？ 舉例來說，要將大寫改成小寫，或者是將資料中的 [tab] 按鍵轉成空白鍵？還有，如何將兩篇訊息整合成一篇？ 底下我們就來介紹一下這些字元轉換命令在管線當中的使用方法
+    </p>
+</body>
+</html> 

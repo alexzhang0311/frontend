@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lesson5-Form</title>
+</head>
+<body>
+    <form action="#" method="post"> <!--action表示要发送到哪一个页面上面，#表示当前页面 method 默认为get-->
+        <label for="account">账号:</label>
+        <input id="account" name="user" type="text" maxlength="7" placeholder='请输入账号'><br> <!--如果不添加name，则参数无法被传到后台;value为默认值;maxlength限制长度;readonly只读，不可写入数据，disable背景颜色变成灰色，placeholder='请输入密码'-->
+        <label for="password">密码:</label>
+        <input id="password" name="password" type="password" placeholder="请输入密码"><br>
+        性别：<br>
+            <input type="radio" id="man" name="gender" value="man"/> <label for="man">男</label> <!--单选按钮,value如果不加则男和女传送的参数值相同！id在相同页面不可以重复使用！-->
+            <input type="radio" id="woman" name="gender" value="woman"/><label for="woman">女</label> <!--相同name属性可以实现互斥-->
+            <br><br>
+        兴趣爱好：<br>
+            <input id="run" name="run"type="checkbox"><label for="run">跑步</label><br> <!--run=on-->
+            <input id="swim" name="swim"type="checkbox" checked><label for="swim">游泳</label><br> <!--checked属性为默认选项-->
+        生日：
+            <select name="birthday" id="" size="3"> <!--select 为下拉列表框;size属性代表列表框显示多少个数据-->
+                <option value="1990">1990</option> <!--selected属性为默认选项-->
+                <option value="1991" selected>1991</option>
+                <option value="1992">1992</option>
+            </select><br>
+            <!--多行文本输入框-->
+            <textarea name="" id="" cols="30" rows="10">
+                您好
+            </textarea>
+            <input type="button" value="我是一个按钮">
+            <input type="reset"> <!--重置页面-->
+            <!--隐藏域,主要用于访问网页时服务器自动生成一个value，用于验证-->
+            <input type="hidden" name="hidden" value='sadsaxsaea' id="">  
+        <br>
+        <input type="submit" value="ok"> <!--表单属性必须放在同一个表单域中才能发挥作用-->
+    </form>
+</body>
+</html>

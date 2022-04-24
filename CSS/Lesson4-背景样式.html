@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lesson4-背景样式</title>
+    <style>
+        .box1{
+            background-repeat: no-repeat; /*非平铺模式,图片若小于盒子尺寸，会平铺，不会出现缝隙*/
+            background-size: cover; 
+            /* contain 将图片完整展示在盒子中，会出现缝隙 
+            100% 100% X方向，Y方向 100%填充于盒子中，图片展示不完整
+            cover 将图片100%自适应盒子的水平尺寸，不会出现缝隙，但是图片展示不完整
+            initial 将图片自适应盒子宽度，宽度不会出席那缝隙，照片根据盒子的尺寸可能展示不完整
+            图片内容自适应div尺寸 */
+            background-position: center center; /*x方向，y方向*/
+            background-color: skyblue;
+            background-image: url('../HTML/static/Desktop.jpg');
+            height: 200px;
+        }
+    </style>
+</head>
+<body>
+    123
+    <div class="box1">
+        456
+    </div>
+    789
+</body>
+</html>

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lesson6-外边距重合</title>
+    <style>
+        .box1,.box2{
+            height: 150px;
+            width: 150px;
+        }
+        .box1{
+            background-color: chartreuse;
+            margin-bottom: 10px;
+            /* 
+                和box2的上边距重合
+                一个元素的下外边距和另外一个元素的上外边距，在一起会发生重合，谁的外边距值大，两元素的外边距就为大的值；
+                如果想避免外边距重合的情况，那么可以给任意一个元素添加一个父元素，添加overflow特性，就会使该元素的外边距被当作拥有实际的内容，就不会出现外边距重合的情况 
+                方式二：父元素使用border:1px solid transparent，使父元素拥有一个实际的边框线
+            */
+        }
+        .box2{
+            background-color: cornflowerblue;
+            margin-top: 10px;
+        }
+        .parent{
+            overflow: hidden;
+        }
+        .box3{
+            width: 250px;
+            height: 250px;
+            background-color: orange;
+        }
+        .box4{
+            width: 120px;
+            height: 120px;
+            background-color: orchid;
+        }
+        /* 子元素的上外边距可能将子元素和父元素一起向下移动而不是子元素相对于父元素向下移动，此时需要使父元素拥有一个实际的边框线或者使用overflow的方式 */
+
+    </style>
+</head>
+<body>
+    <!-- 
+        emmet插件:https://docs.emmet.io/cheat-sheet/ 
+    -->
+    <div class="box1"></div>
+    <div class="parent">
+        <div class="box2"></div>
+    </div>
+    <div class="box3">
+        <div class="box4"></div>
+    </div>
+</html>
+

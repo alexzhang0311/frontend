@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lesson7-浮动</title>
+    <style>
+        .box1{
+            width: 150px;
+            height: 150px;
+            background-color: chartreuse;
+            float: left;
+        }
+        .box2{
+            width: 100px;
+            height: 100px;
+            background-color: coral;
+            float: left;
+        }
+        .box3{
+            width: 50px;
+            height: 50px;
+            background-color: red;
+            float: left;
+        }
+        .box4{
+            width: 160px;
+            height: 160px;
+            background-color: purple;
+        }
+        .clear{
+            clear: both;
+        }
+        .left{
+            width: 200px;
+            height: 400px;
+            background-color: orange;
+            float: left;
+            /* margin: 0 10px 0 0; */
+        }
+        .middle{
+            background-color: saddlebrown;
+            width: 200px;
+            height: 400px;
+            float: left;
+        }
+        .right{
+            width: 200px;
+            height: 400px;
+            background-color: skyblue;
+            float: left;
+            /* margin: 0 0 0 10px;  */
+            /* 左右margin不会出现上下margin会出现的问题 */
+        }
+        .wrap{
+            width: 920px;
+            border: red solid 5px;
+            /* 
+                如果包围宽度与子元素宽度不一直会有问题
+                因为子元素为float，所以无法将wrap父元素这个盒子撑起来，即父元素没有高度，只有宽度 
+            */
+            margin: auto;
+        }
+        .wrap2{
+            width: 600px;
+            /* float: right; */
+            border: red solid 5px;
+            margin: auto;
+            /* overflow: hidden;  */
+        }
+    </style>
+</head>
+<body>
+    <!-- 浮动 存在一个元素浮动层，与非浮动层元素不在一个层面，因此再添加一个元素，该元素会存在于浮动层下方，被浮动层元素覆盖。但是文字就不会有这个问题！ -->
+    <!-- <div class="box1"></div>
+    <div class="box2"></div>
+    <div class="box3"></div> -->
+    <!-- 清除浮动 使得浮动层占据下层的位置-->
+    <!-- <div class="clear"></div>
+    <div class="box4"></div> -->
+
+    <!-- 两列布局 -->
+    <!-- <div class="wrap">
+        <div class="left"></div>
+        <div class="right"></div> -->
+        <!-- 使浮动的子元素占据真实的范围 -->
+        <!-- <div class="clear"></div>
+    </div> -->
+
+    <!-- 三列布局 -->
+    <div class="wrap2">
+        <div class="left"></div>
+        <div class="middle"></div>
+        <div class="right"></div>
+        <div class="clear"></div> 清除浮动方法1
+        <p style="margin: 0px; ">清除浮动方法</p>
+        <!-- <div style="background-color: brown; width: 20px;height: 30px;"></div> -->
+    </div>
+
+
+</body>
+</html>

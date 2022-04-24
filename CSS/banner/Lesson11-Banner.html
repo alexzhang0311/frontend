@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lesson11-Banner</title>
+    <style>
+        li{
+            list-style: none;
+        }
+        .wrap{
+            height: 460px;
+            width: 100%;
+            position: relative;
+        }
+        .box1{
+            height: 460px;
+            width: 100%;
+            /* overflow: hidden; */
+        }
+        .box1 img{
+            height: 460px;
+            width: 100%;
+            position: absolute;
+        }
+        .previous,.next{
+            width: 70px;
+            height: 100px;
+            background: rgba(0, 0, 0, 0.8);
+            color: white;
+            font-size: 32px;
+            cursor: pointer;
+            text-align: center;
+            line-height: 100px;
+            position: absolute;
+            /* top: 180px; */
+            top: 50%;
+            margin-top: -50px;
+            z-index: 1;
+        }
+        .previous{
+            left: 0;
+        }
+        .next{
+            right: 0;
+        }
+        .btn{
+            position: absolute;
+            padding: 0;
+            bottom: 0;
+            z-index: 9;
+            left: 50%;
+            margin-left: -42px;
+            margin: 0 0 0 -42px;
+            bottom: 20px;
+        }
+        .btn li{
+            width: 16px;
+            height: 16px;
+            background: white;
+            /* li标签横向排列 */
+            float: left;
+            margin-right: 12px;
+            /* li标签变圆 */
+            border-radius: 8px; 
+            cursor: pointer;
+        }
+        .btn .on{
+            background: orange;
+        }
+    </style>
+</head>
+<body>
+    <div class="wrap">
+        <div class="box1">
+            <img src="img\1.png" alt="" style="z-index: 1;">
+            <img src="img\2.png" alt="">
+            <img src="img\3.png" alt="">
+        </div>
+        <div class="paging">
+            <div class="previous">&lt;</div>
+            <div class="next">&gt;</div>
+        </div>
+        <ul class="btn">
+            <li class="on"></li>
+            <li></li>
+            <li></li>
+        </ul>
+    </div>
+    </body>
+</html>

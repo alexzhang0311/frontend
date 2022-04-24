@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lesson3 图片</title>
+</head>
+<body>
+    <h1>HTML图片</h1>
+    <h3>常用图片格式</h3>
+    <p>
+        1.BMP-----位图格式（点阵图）---相机拍摄占用空间大，色彩丰富<br>
+        2.JPEG----压缩格式，通常是破坏数据性压缩方式，失真，网站经常采用<br>
+        3.GIF-----动图多帧支持<br>
+        4.PNG-----无损压缩的位图格式，支持Alpha通道的透明、半透明图片特性<br>
+        图标标签&lt;img src="" alt="" width="" height=""&gt;
+    </p>
+    <!--绝对路径引用图片-->
+    <img src="E:\code\HTML\static\Desktop.jpg" alt="桌面" width="200" height="">
+    <!--相对路径引用图片-->
+    <img src="static\Desktop.jpg" alt="" width="200" height="" title="桌面">
+    <!--图片超链接-->
+    <a href="http://www.baidu.com">
+        <!--../表示上一层目录-->
+        <img src="..\Desktop.jpg" alt="" width="200" height="" title="桌面">
+    </a>
+</body>
+</html>
