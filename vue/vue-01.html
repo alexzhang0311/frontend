@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>01Vue-Experiance</title>
+    <script src="vue.js"></script>
+    
+</head>
+<body>
+    <div id="app">
+        <p>{{ message }}</p>
+        <button @click="message='杨涵'">更改值</button>
+        <p>{{greet()}}</p>
+    </div>
+    <script>
+        new Vue({
+            el:"#app",
+            data:{
+                message:"你好帅弛弛"
+            },
+            methods:{
+                greet(){
+                    return "我是greet函数"
+                }
+            }
+        })
+    </script>
+</html>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        window.onload = function(){  //等待页面元素完全加载完成后执行function功能
+            var box = document.getElementsByClassName("box");
+            console.log(box[1].textContent);
+        }
+    </script>
+    <style>
+        .box{
+            height: 100px;
+            width: 100px;
+            background-color: brown;
+        }
+    </style>
+</head>
+<body>
+    <div class="box">hello</div>
+    <div class="box">alex</div>
+    <script>
+        // alert(Math.max(1,2,3,7,9))
+        // alert(parseInt("1234ABC")) //解析数字，遇到不是数字的不会停止解析就停下返回
+        // alert(parseFloat("123.345abc"))
+        // var a = 3.14159
+        // alert(a.toFixed(4)) //保留4位小数，返回字符串
+        // alert(parseInt(Math.random()*100))
+        // alert(parseInt(Math.random()*30 + 60 )) //生成60-90之间的随意数 
+
+        var str = "Hello Javascript！";
+        // alert(str.length);
+        // alert(str[1]);
+        // alert(str.charAt(1));
+        // alert(str.substring(0,5));
+        // alert(str.indexOf("！")) //索引
+
+        // if (str.indexOf("J") != -1){
+        //     console.log("存在J");
+        // }else{
+        //     console.log("存在个鸡儿");
+        // }
+
+        // alert(str.split(" ")[0]);
+
+        alert(str.toUpperCase());
+        alert(str.toLowerCase());
+
+    </script>
+</body>
+</html>

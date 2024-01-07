@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #box {
+            width: 300px;
+            height: 300px;
+            background-color: black;
+        }
+    </style>
+</head>
+<body>
+    <div id="box"></div>
+    <script>
+        var box = document.getElementById("box");
+
+        box.onclick = function(){
+            alert("莫挨老子");
+        }
+
+        box.onmouseover = function(){
+            console.log("表哥我进来了哦")
+        }
+        box.onmouseout = function(){
+            console.log("表哥我出去了哦")
+        }
+    </script>
+</body>
+</html>

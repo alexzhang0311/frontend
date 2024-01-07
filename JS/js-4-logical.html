@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Logical</title>
+</head>
+<body>
+    <ul class="list">
+        <li>1</li>
+        <li>2</li>
+        <li>3</li>
+    </ul>
+
+    <script>
+        var a = 1;
+        if (a>0){
+            console.log('嘻嘻');
+        }else{
+            console.log('哈哈');   
+        }
+
+        var b = 3;
+        while(b!=0){
+            // alert(b);
+            console.log(b);
+            b--;
+        }
+
+        var c = 3;
+        do {
+            c--;
+            console.log(c);
+            
+        } while(c>1);
+
+
+        for (var a = 3;a>=0;a--){
+            console.log("第"+a+"次");
+        }
+
+        var uls = document.getElementsByClassName("list")[0];
+        var lis = uls.getElementsByTagName("li");
+        
+        for (var index = 0;index < lis.length;index++){
+            console.log(index);
+            lis[index].onclick = function(){
+                alert(this.innerHTML); //this 代表被点击的元素
+            }
+        }
+
+        //执行逻辑，for语句将lis中所有元素绑定onclick动作 
+
+        if(5<6){
+            console.log("True");
+        } else {
+            console.log("False");
+        }
+
+        if(5<6) alert("Yes");
+
+        5<6 ? alert("yes") : alert("no");
+
+        var username = "Alex";
+        switch(username){
+            case "Alex":
+                alert(username+"你真厉害");
+                break;
+            case "Iris":
+                alert(username+"你真美丽");
+                break;
+            default:
+                alert(username+"你真吊毛");
+                break;
+        }
+        
+    </script>
+
+
+</body>
+</html>
