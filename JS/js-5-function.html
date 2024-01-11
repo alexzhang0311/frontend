@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Function</title>
+</head>
+<body>
+    <script>
+
+        //函数声明
+        function fn1(){
+            console.log(1);
+        };
+
+        fn1();
+
+        // 匿名函数，函数表达式
+        var fn2 = function(){
+            console.log(2);
+        };
+
+        fn2();
+
+        //即时函数，定义函数之后可以立即执行
+        var args = 10;
+        (function(){console.log(3)})();
+        -(function(){console.log(4)})();
+        ~(function(){console.log(5)})();
+        +(function(){console.log(6)})();
+        !(function(hey){console.log(hey)})(args);
+
+        //传参
+
+        function add(a,b){
+            result = a + b;
+            return result;
+        }
+
+        console.log(add(12,13))
+
+        //可变参数,使用arguments可以获取所有参数
+
+        function sum(){
+            var result1 = 0;
+            for(var index=0;index<arguments.length;index++){
+                result1 += arguments[index]; 
+            }
+
+            return result1;
+        }
+
+        console.log(sum(1,2,3,4));
+
+        //事件驱动函数执行，this指向触发事件的对象
+        var box = document.getElementById("box");
+        box.onclick = function(){
+            alert("莫挨老子"); //this 默认指向window,在这里指向box
+        }
+
+
+    </script>
+    
+</body>
+</html>
