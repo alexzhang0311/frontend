@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>时间</title>
+</head>
+<body>
+    <div id="timer"></div>
+    <script>
+        // function fn1(){
+        //     alert("Hello");
+        // }
+
+        // setTimeout(fn1,2000) //延迟2s后弹出;设置多少S后定时刷新
+        // var timer2 = setTimeout('alert("Alex")',2000);
+        // setTimeout('alert("Tim")',3000);
+
+        // clearTimeout(2) //清除定时器
+        // clearTimeout(timer2) //清除定时器
+
+        // //循环定时器，每过XX秒就自动执行一次
+
+        // function fresh(){
+        //     location.reload();
+        //     // alert("广告")
+        // }
+
+        // var timer3 = setInterval(fresh,3000);
+        // // var timer3 = setTimeout(fresh,3000);
+
+        // clearInterval(timer3);
+        
+        function time(){
+            var date = new Date();
+            var timer = date.getHours() + "点" + date.getMinutes() + "分" + date.getSeconds() + "秒"
+
+            // var sp = document.createElement("span");
+            
+            var sp = document.getElementById("timer");
+            sp.innerHTML = timer;
+            
+        }
+
+        setInterval(time,1000)
+        
+        
+
+
+
+
+    </script>
+    
+</body>
+</html>
