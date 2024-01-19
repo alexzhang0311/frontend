@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JSON</title>
+</head>
+<body>
+    <script>
+        var obj = {
+            "name":"alex",
+            "age":19
+        };
+
+        console.log(obj.name);
+
+        var obj1 = new Object();
+        obj1.name = "Iris";
+        obj1.age = 30;
+
+        console.log(obj1)
+
+
+        //字符串转JSON
+
+        var s = '{"name":"tim","age":19}';
+        var obj2 = JSON.parse(s)
+
+        console.log(obj2.name)
+
+        //JSON转字符串
+
+        console.log(JSON.stringify(obj2))
+
+        for (var key in obj2){
+            console.log(key+"======="+obj2[key])
+        }
+    </script>
+</body>
+</html>

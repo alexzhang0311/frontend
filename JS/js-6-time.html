@@ -5,9 +5,61 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>时间</title>
+    <style>
+        .nav{
+            width: 99%;
+            margin: 0 auto;
+            background-color: lightblue;
+            border: 5px solid red;
+            border-color: red;
+        }
+        .nav ul{
+            display: flex;
+            list-style: none;
+            padding: 0px;
+            margin: 0 auto;
+        }
+
+        .nav li{
+            flex: 1;
+            width: 20px;
+            text-align: center;
+            padding: 5px;
+        }
+
+        .nav a {
+            text-decoration: none;
+            color: black;
+        }
+
+        #box{
+            width: 300px;
+            margin: 0 auto;
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            left: 50%;
+            transform: translateX(-50%);
+            font-size: large;
+        }
+    </style>
 </head>
 <body>
-    <div id="timer"></div>
+    <nav class="nav">
+        <ul>
+          <li><a href="#">首页</a></li>
+          <li><a href="#">页面1</a></li>
+          <li><a href="#">页面2</a></li>
+          <li><a href="#">页面3</a></li>
+        </ul>
+      </nav>
+      <div id = "box">
+        <div id="timer"></div>
+        <div id="wuxiu"></div>
+        <div id="rever"></div>
+        <div id="fangjia"></div>
+      </div>
+
     <script>
         // function fn1(){
         //     alert("Hello");
@@ -33,8 +85,9 @@
         // clearInterval(timer3);
         
         function time(){
+            var map = ["星期天","星期一","星期二","星期三","星期四","星期五","星期六"];
             var date = new Date();
-            var timer = date.getHours() + "点" + date.getMinutes() + "分" + date.getSeconds() + "秒"
+            var timer = date.getFullYear() + "年"+ (parseInt(date.getMonth())+1) + "月" + date.getDay() + "日"+ " "+date.getHours() + "点" + date.getMinutes() + "分" + date.getSeconds() + "秒" + " " + map[date.getDay()];
 
             // var sp = document.createElement("span");
             
@@ -44,11 +97,69 @@
         }
 
         setInterval(time,1000)
+
+
+        //倒计时
+
+        function rever(){
+            today = new Date();
+            var year = today.getFullYear();
+            var month = today.getMonth();
+            var date = today.getDate();
+            var hours = parseInt(today.getHours());
+
+            var target = new Date(year,month,date,'18');
+            var target_wuxiu = new Date(year,month,date,'11','30');
+            var target_shang = new Date(year,month,date+1,'09','00');
+            var target_jia = new Date(year,1,2,'18');
         
+            var raw_t = (target -  new Date())/1000;
+            var raw_shang = (target_shang -  new Date())/1000;
+            var raw_wuxiu = (target_wuxiu -  new Date())/1000;
+            var raw_jia = (target_jia -  new Date())/1000;
+
+            var ss = parseInt(raw_t % 60);
+            var mm = parseInt((raw_t / 60) % 60);
+            var hh = parseInt((raw_t / 3600) % 24);
+            var dd = parseInt((raw_t / 3600 / 24));
+
+            var ss_wuxiu = parseInt(raw_wuxiu % 60);
+            var mm_wuxiu = parseInt((raw_wuxiu / 60) % 60);
+            var hh_wuxiu = parseInt((raw_wuxiu / 3600) % 24);
+            var dd_wuxiu = parseInt((raw_wuxiu / 3600 / 24));
+
+            var ss_shang = parseInt(raw_shang % 60);
+            var mm_shang = parseInt((raw_shang / 60) % 60);
+            var hh_shang = parseInt((raw_shang / 3600) % 24);
+            var dd_shang = parseInt((raw_shang / 3600 / 24));
+
+            var ss_jia = parseInt(raw_jia % 60);
+            var mm_jia = parseInt((raw_jia / 60) % 60);
+            var hh_jia = parseInt((raw_jia / 3600) % 24);
+            var dd_jia = parseInt((raw_jia / 3600 / 24));
+
+            
+            info_wuxiu = ""
+            var info_jia = "距离放假还有:" + dd_jia + "天" + hh_jia + "小时" + mm_jia + "分" + ss_jia + "秒";
+            if (hours >= 9 && hours< 18){
+                if (hours < 12){
+                    var info_wuxiu = "距离午休还有:" + hh_wuxiu + "小时" + mm_wuxiu + "分" + ss_wuxiu + "秒";
+                }
+                var info = "距离下班还有:" + hh + "小时" + mm + "分" + ss + "秒";
+            } else{
+                var info = "距离上班还有:" + hh_shang + "小时" + mm_shang + "分" + ss_shang + "秒";
+            }
+            var wuxiuE = document.getElementById("wuxiu");
+            wuxiuE.innerHTML = info_wuxiu
+
+            var re = document.getElementById("rever");
+            re.innerHTML = info;
+
+            var chunjie = document.getElementById("fangjia");
+            chunjie.innerHTML = info_jia;
+        }
         
-
-
-
+        setInterval(rever,1000)
 
     </script>
     
