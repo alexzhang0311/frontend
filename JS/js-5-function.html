@@ -54,11 +54,29 @@
         console.log(sum(1,2,3,4));
 
         //事件驱动函数执行，this指向触发事件的对象
-        var box = document.getElementById("box");
-        box.onclick = function(){
-            alert("莫挨老子"); //this 默认指向window,在这里指向box
+        // var box = document.getElementById("box");
+        // box.onclick = function(){
+        //     alert("莫挨老子"); //this 默认指向window,在这里指向box
+        // }
+
+        //闭包
+
+        function wrap(){
+            var a = 0;
+            function close(){
+                a ++;
+                console.log(a);
+            }
+
+            return close;
         }
 
+
+        var func1 = wrap();
+        func1();
+        func1();
+        func1();
+        func1();
 
     </script>
     
